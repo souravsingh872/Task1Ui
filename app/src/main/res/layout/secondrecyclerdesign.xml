@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="150dp"
+    android:layout_height="200dp">
+
+    <RelativeLayout
+        android:layout_width="150dp"
+        android:layout_height="300dp">
+
+        <RelativeLayout
+            android:id="@+id/relative1"
+            android:layout_width="120dp"
+            android:layout_height="100dp"
+            android:layout_centerInParent="true"
+            android:background="@drawable/secondrecyclerlinerdesdign" />
+
+        <ImageView
+            android:id="@+id/roboimage"
+            android:layout_width="100dp"
+            android:layout_height="150dp"
+            android:layout_alignBottom="@id/relative1"
+            android:layout_centerHorizontal="true"
+            android:scaleType="fitXY"
+            android:src="@drawable/robo1_removebg_preview" />
+
+        <RelativeLayout
+            android:id="@+id/relative2"
+            android:layout_width="120dp"
+            android:layout_height="50dp"
+            android:layout_below="@id/relative1"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="2dp"
+            android:background="@drawable/linerdesignsec">
+
+            <TextView
+                android:id="@+id/seclinertext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:text="View Video"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+
+
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

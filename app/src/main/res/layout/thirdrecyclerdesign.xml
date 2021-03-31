@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/darkblue"
+    >
+    <RelativeLayout
+        android:layout_width="90dp"
+        android:layout_height="30dp"
+        android:id="@+id/relative3rd"
+        android:background="@drawable/recyclerbttndesign"
+        android:layout_margin="10dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:text="Coding"
+            android:textStyle="bold"
+            android:id="@+id/textRec3"/>
+
+    </RelativeLayout>
+
+</LinearLayout>

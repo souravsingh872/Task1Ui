@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/darkblue"
+    tools:context=".MainActivity">
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottomnav"
+        android:fillViewport="true"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:id="@+id/tpopbarrelative">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/menu"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_menu"/>
+                <RelativeLayout
+                    android:layout_width="250dp"
+                    android:layout_height="35dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/searchboxdesign"
+                    android:id="@+id/relativesearchbox"
+                   >
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                       android:layout_marginLeft="10dp"
+                        android:src="@drawable/ic_baseline_search_24"/>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="10dp"
+                        android:src="@drawable/ic_microphone"/>
+
+
+                </RelativeLayout>
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_add_button"
+                    android:layout_alignParentRight="true"/>
+            </RelativeLayout>
+
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_width="200dp"
+                android:layout_height="40dp"
+                android:textAllCaps="false"
+                android:layout_marginTop="20dp"
+                android:id="@+id/buttoncategories"
+                android:background="@drawable/buttondesign"
+                android:layout_below="@id/tpopbarrelative"
+                android:text="Children's Categories"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/buttoncategories"
+                android:layout_margin="15dp"
+                android:orientation="horizontal"
+                tools:listitem="@layout/firstrecycler"
+                android:id="@+id/firstrecycler"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/black"
+                android:layout_below="@id/firstrecycler"
+                >
+            </View>
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_width="120dp"
+                android:layout_height="40dp"
+                android:textAllCaps="false"
+                android:layout_marginTop="30dp"
+                android:id="@+id/buttonrobotics"
+                android:background="@drawable/buttondesign"
+                android:layout_below="@id/firstrecycler"
+                android:text="Robotics"/>
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/buttonrobotics"
+                android:layout_margin="15dp"
+                tools:listitem="@layout/secondrecyclerdesign"
+                android:orientation="horizontal"
+                android:id="@+id/secondrecycler"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_width="160dp"
+                android:layout_height="40dp"
+                android:textAllCaps="false"
+                android:layout_marginTop="30dp"
+                android:id="@+id/browsebyage"
+                android:background="@drawable/buttondesign"
+                android:layout_below="@id/secondrecycler"
+                android:text="Browse by Age"/>
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/browsebyage"
+                android:layout_margin="15dp"
+                android:orientation="horizontal"
+                tools:listitem="@layout/firstrecycler"
+                android:id="@+id/thirdtrecycler"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_below="@id/thirdtrecycler"
+                tools:listitem="@layout/secondrecyclerdesign"
+                android:orientation="horizontal"
+                android:id="@+id/forthrecycler"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
+
+        </RelativeLayout>
+    </androidx.core.widget.NestedScrollView>
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        app:itemTextColor="@color/white"
+        app:itemRippleColor="@color/darkyellow"
+        android:layout_alignParentBottom="true"
+        app:menu="@menu/bottomnavmenu"
+        android:id="@+id/bottomnav"/>
+</RelativeLayout>
